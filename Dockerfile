@@ -1,7 +1,8 @@
 FROM node:lts-alpine
 
 RUN set -ex && mkdir /app
-RUN apk add --no-cache python3 youtube-dl \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
+    && apk add --no-cache python3 youtube-dl \
     && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp \
     && chmod a+rx /usr/local/bin/yt-dlp
 
