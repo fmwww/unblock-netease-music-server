@@ -2,7 +2,7 @@ version: '3'
 
 services:
     unblockneteasemusic:
-        build: .
+        image: pan93412/unblock-netease-music-enhanced
         environment:
             NODE_ENV: production
 
