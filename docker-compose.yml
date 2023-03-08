@@ -12,6 +12,7 @@ services:
         # Change sources here
         command: -o kugou kuwo -e https://music.163.com
 
+        restart: always
         ports:
             - ${HTTP_PROXY_PORT:-8080}:8080
             - ${HTTPS_PROXY_PORT:-8081}:8081
