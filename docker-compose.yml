@@ -10,7 +10,7 @@ services:
             - ./server.crt:/app/server.crt
             - ./server.key:/app/server.key
         # Change sources here
-        command: -o kugou kuwo -e https://music.163.com
+        command: -o kugou kuwo -e https://music.163.com -s
 
         restart: always
         ports:
